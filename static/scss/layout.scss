@@ -1,0 +1,17 @@
+.banner{
+    &__container {
+        background: #5f1f5f;
+        color: white;
+        text-align: center;
+        position: fixed;
+        width: 100%;
+        height: 20vh;
+        padding-top: 7vh;
+        top: 0;
+        z-index: 3;
+    }
+}
+.root {
+    margin-top: 20vh;
+    height: 80vh;
+}
