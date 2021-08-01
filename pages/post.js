@@ -47,7 +47,7 @@ class Post extends React.Component {
                   <div className="col-12">
                     <h2>{post.title}</h2>
                     <p className="m-b10"> 
-                      <span className="author">Posted by : {post.author}</span>
+                      <span className="author">Posted by  {post.author}</span>
                       <span className="author"> {moment(createdDate).fromNow()}</span>
                     </p>
                     
