@@ -33,7 +33,6 @@ app.prepare().then(() => {
     server.use(function(req, res, next){
       var qsi = req.originalUrl.indexOf('?');
       var path = req.originalUrl;
-        // console.warn(path)
         if(qsi > -1) path = path.substr(0, qsi);
         if(path.substr(-1) === '/' || ~path.indexOf('.')) return next();
         var qs = '';

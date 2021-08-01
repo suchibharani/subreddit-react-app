@@ -2,11 +2,10 @@ import { actionTypes } from '../constants/actionTypes'
 
 import {exampleInitialState}  from './initialState'
 
-function userDataReducer(state = exampleInitialState, action) {
-    console.warn(action)
+function postReducer(state = exampleInitialState, action) {
   switch (action.type) {
 
-    case actionTypes.LOAD_DATA_SUCCESS:
+    case actionTypes.LOAD_POST_SUCCESS:
       return [
         ...state,
         ...action.data,
@@ -17,4 +16,4 @@ function userDataReducer(state = exampleInitialState, action) {
   }
 }
 
-export default userDataReducer
+export default postReducer

@@ -1,1 +1,1 @@
-export * from './userDataActions';
+export * from './subredditActions';

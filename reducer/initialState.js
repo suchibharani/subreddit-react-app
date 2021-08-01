@@ -1,5 +1,10 @@
 export const exampleInitialState = {
-    count: 0,
     error: null,
-    placeholderData: [],
+    posts: [],
+    sort : 'hot',
+    pagination : {
+      last : null
+    },
+    isLoading : false,
+    selectedPost : []
   }

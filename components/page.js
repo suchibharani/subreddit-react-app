@@ -9,7 +9,7 @@ function Page({
   error,
   linkTo,
   NavigateTo,
-  placeholderData,
+  posts,
   title,
 }) {
   return (
@@ -20,9 +20,9 @@ function Page({
           <a>Navigate: {NavigateTo}</a>
         </Link>
       </nav>
-      {/* {placeholderData && (
+      {/* {posts && (
         <pre>
-          <code>{JSON.stringify(placeholderData, null, 2)}</code>
+          <code>{JSON.stringify(posts, null, 2)}</code>
         </pre>
       )} */}
       {error && <p style={{ color: 'red' }}>Error: {error.message}</p>}
@@ -35,7 +35,7 @@ Page.propTypes = {
   linkTo: PropTypes.any,
   title: PropTypes.any,
   NavigateTo: PropTypes.any,
-  placeholderData: PropTypes.any
+  posts: PropTypes.any
 };
 
 

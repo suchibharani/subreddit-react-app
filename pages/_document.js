@@ -3,7 +3,7 @@
   * Author:  Suchitra
   * Description :  It helps to put up all static files and meta tags
 *********************************************************/
-import Document, { Head, Main, NextScript } from 'next/document'
+import Document, { Head, Main, NextScript, Html } from 'next/document'
 import Helmet from 'react-helmet'
 import stylesheet from '../static/scss/styles.scss'
 
@@ -50,12 +50,13 @@ export default class extends Document {
   render () {
     let customCss = assetVal.PREFIX+"/static/css/custom.css?v="+timestamp
     return (
-      <html {...this.helmetHtmlAttrComponents}>
+      <Html {...this.helmetHtmlAttrComponents}>
         <Head>
           {/* { this.helmetJsx } */}
           {/* { this.helmetHeadComponents } */}
           <link rel="shortcut icon" type="image/png" href=""/>
           <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&display=swap" rel="stylesheet"/>
+          <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
           <link rel="stylesheet" href={assetVal.PREFIX+"/static/css/base.css"}/>
           <link rel="stylesheet" href={customCss} />
           <meta name="robots" content="noindex" />
@@ -67,7 +68,7 @@ export default class extends Document {
           <NextScript />
         </body>
         <style jsx>{stylesheet}</style>
-      </html>
+      </Html>
     )
   }
 }
