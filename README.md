@@ -25,6 +25,8 @@ npm run start
 
 ```
 
+and go to http://localhost:3200/
+
 
 ## Run with Production mode
 
@@ -40,5 +42,6 @@ npm run build
 npm run serve
 
 ```
+and go to http://localhost:3500/
 
 
