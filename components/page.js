@@ -20,11 +20,11 @@ function Page({
           <a>Navigate: {NavigateTo}</a>
         </Link>
       </nav>
-      {/* {posts && (
+      {posts && (
         <pre>
           <code>{JSON.stringify(posts, null, 2)}</code>
         </pre>
-      )} */}
+      )}
       {error && <p style={{ color: 'red' }}>Error: {error.message}</p>}
     </div>
   )
