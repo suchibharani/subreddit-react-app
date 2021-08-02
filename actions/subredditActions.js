@@ -63,7 +63,7 @@ export function loadPostSuccess(data) {
 }
 /* sort */
 
-export function sort(sort) {
+export function sortAction(sort) {
   return { 
     type: actionTypes.SORT,
     sort 

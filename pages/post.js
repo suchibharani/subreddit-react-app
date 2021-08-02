@@ -29,6 +29,9 @@ class Post extends React.Component {
 
   render() {
     var props = this.props;
+    if(props.selectedPost && props.selectedPost.length == 0 ){
+        return (<div> No post found</div>);
+    }
     var post = props.selectedPost[0].data;
     let html = (post.selftext_html);
     var createdDate = new Date(post.created * 1000);

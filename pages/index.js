@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import Link from 'next/link'
 import moment from 'moment';
 
+import SortCmp from '../components/sort'
 
 import { loadData } from '../actions/index'
 import {bindActionCreators} from 'redux';
@@ -25,6 +26,7 @@ class Index extends React.Component {
   }
   constructor(props) {
     super(props);
+    this.sortFunc = this.sortFunc.bind(this);
   }
 
   componentDidUpdate(prevProps) {
@@ -38,8 +40,8 @@ class Index extends React.Component {
   downVote(id){
     this.props.actions.downVote(id);
   }
-  sort(sort){
-    this.props.actions.sort(sort);
+  sortFunc(sort){
+    this.props.actions.sortAction(sort);
   }
   loadMore(){
     this.props.actions.loadMore();
@@ -51,18 +53,11 @@ class Index extends React.Component {
     return (
       <div className="index__container" id="index__container" > 
           <div className="container">
-              <div className="row">
-                  <div className="col-12">
-                      <div className="sort">
-                      <div className="btn-group" role="group" aria-label="Basic outlined example">
-                        <button type="button" onClick={() => this.sort('hot')} className={props.sort == "hot" ? 'btn btn-dark' : 'btn btn-outline-dark'}>hot</button>
-                        <button type="button" onClick={() => this.sort('new')} className={props.sort == "new" ? 'btn btn-dark' : 'btn btn-outline-dark'}>new</button>
-                        <button type="button" onClick={() => this.sort('top')} className={props.sort == "top" ? 'btn btn-dark' : 'btn btn-outline-dark'}>top</button>
-                      </div>
-                      
-                      </div>
-                  </div>
-              </div>
+              
+              <SortCmp 
+                  sortFunc={this.sortFunc}
+                  sort={props.sort}
+              />
               
               {
                   props.posts.map((item,index) => {
@@ -86,7 +81,7 @@ class Index extends React.Component {
                               <span className="author">Posted by  {item.data.author}</span>
                               <span className="author"> {moment(createdDate).fromNow()}</span>
                               <h5 className="card-title">
-                              <Link as={'/'+item.data.id +'/'} href={'/'+item.data.id}>
+                              <Link as={'/post/'+item.data.id +'/'} href={'/post/'+item.data.id}>
                               <a>{item.data.title}</a>
                             </Link>
                             </h5>

@@ -7,11 +7,11 @@ const APP_ROUTES = [{
     page: 'other',
 }, {
   name: 'post',
-  pattern: '/:id',
+  pattern: '/post/:id',
   page: 'post',
 }, {  
   name: 'index',
-  pattern: '/',
+  pattern: '/:id',
   page: 'index'
 }]
 

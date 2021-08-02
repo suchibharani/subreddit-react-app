@@ -60,7 +60,7 @@ function* loadPostSaga(action) {
     const data = yield call(fetchSubredditPost,action.id);
     yield put(loadPostSuccess(data))
   } catch (err) {
-    yield put(failure(err))
+    yield put(failure(err.message))
   }
 }
 
