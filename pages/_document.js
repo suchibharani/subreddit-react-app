@@ -60,8 +60,7 @@ export default class extends Document {
           <link rel="stylesheet" href={assetVal.PREFIX+"/static/css/base.css"}/>
           <link rel="stylesheet" href={customCss} />
           <meta name="robots" content="noindex" />
-          <meta name='viewport' content='width=device-width, initial-scale=1' />
-          <script src={assetVal.PREFIX+"/static/js/jquery.min.js"}></script>          
+          <meta name='viewport' content='width=device-width, initial-scale=1' />        
         </Head>
         <body {...this.helmetBodyAttrComponents}>
           <Main />

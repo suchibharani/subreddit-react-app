@@ -50,7 +50,12 @@ class Post extends React.Component {
                       <span className="author">Posted by  {post.author}</span>
                       <span className="author"> {moment(createdDate).fromNow()}</span>
                     </p>
-                    
+                    <p>
+                    <span><i className="far fa-comments"></i> {comments}  | </span>
+                    <span><i className="fas fa-long-arrow-alt-up"></i> up vote count : {post.ups}  | </span>
+                    <span><i className="fas fa-long-arrow-alt-down"></i> down vote count : {post.downs}</span>
+                    </p>
+                    <hr />
                     { isImage && !isHighResAvailable &&
                         <div>
 
@@ -69,11 +74,7 @@ class Post extends React.Component {
                     }
 
                     <hr />
-                    <p>
-                    <span><i className="far fa-comments"></i> {comments}  | </span>
-                    <span><i className="fas fa-long-arrow-alt-up"></i> up vote count : {post.ups}  | </span>
-                    <span><i className="fas fa-long-arrow-alt-down"></i> down vote count : {post.downs}</span>
-                    </p>
+                    
                   </div>
                 </div>
           </div>

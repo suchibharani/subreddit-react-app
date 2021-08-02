@@ -1,6 +1,6 @@
 import { actionTypes } from '../constants/actionTypes';
 
-
+/*  subreddit */
 export function failure(error) {
   return {
     type: actionTypes.FAILURE,
@@ -23,7 +23,7 @@ export function updateData(data) {
     data,
   }
 }
-
+/* Pagination */
 export function updatePagination(after) {
   return { type: actionTypes.UPDATE_PAGINATION,after }
 }

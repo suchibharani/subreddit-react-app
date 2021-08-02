@@ -7,7 +7,6 @@ import moment from 'moment';
 
 import { loadData } from '../actions/index'
 import {bindActionCreators} from 'redux';
-// import ReactHtmlParser from 'react-html-parser';
 
 //importing styles
 import styleSheet from '../static/scss/styles.scss'
@@ -49,9 +48,6 @@ class Index extends React.Component {
 
   render() {
     var props = this.props;
-    // const myHTML = `<h1>John Doe</h1>`;
-    
-    
     return (
       <div className="index__container" id="index__container" > 
           <div className="container">
@@ -90,7 +86,7 @@ class Index extends React.Component {
                               <span className="author">Posted by  {item.data.author}</span>
                               <span className="author"> {moment(createdDate).fromNow()}</span>
                               <h5 className="card-title">
-                              <Link href={'/post/'+item.data.id} as={'/post/'+item.data.id +'/'}>
+                              <Link as={'/'+item.data.id +'/'} href={'/'+item.data.id}>
                               <a>{item.data.title}</a>
                             </Link>
                             </h5>

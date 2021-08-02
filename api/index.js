@@ -1,5 +1,6 @@
 import  fetch from 'isomorphic-unfetch'
 
+/* All post */
 
 const URL = 'https://www.reddit.com/r/dataisbeautiful/';
 const fetchSubreddit = async (filter) => {
@@ -28,7 +29,7 @@ const fetchSubreddit = async (filter) => {
         after : after
     };
 };
-
+/* Individual post */
 const fetchSubredditPost = async (id) => {
     const response = await fetch(`${URL}`+'comments/'+id+'.json');
     const data = await response.json();

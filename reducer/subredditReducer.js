@@ -7,10 +7,7 @@ function userDataReducer(state = exampleInitialState, action) {
 
     case actionTypes.LOAD_DATA_SUCCESS:
       return action.data
-      // return [
-      //   ...state,
-      //   ...action.data,
-      // ]
+      
     case actionTypes.LOAD_MORE_SUCCESS:
       return [
         ...state,
