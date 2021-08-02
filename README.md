@@ -13,6 +13,32 @@
 
 # How to run and install
 
+## Run with development mode
 
+
+```javascript
+# To install packages
+npm install
+
+# To run the project
+npm run start
+
+```
+
+
+## Run with Production mode
+
+
+```javascript
+# To install packages
+npm install
+
+# To build the project
+npm run build
+
+# To build the project
+npm run serve
+
+```
 
 
