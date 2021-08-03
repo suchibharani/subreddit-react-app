@@ -45,9 +45,14 @@ npm run serve
 and go to http://localhost:3500/
 
 
-## Screenshots
+# Screenshots
+
+## Subreddit page with posts 
 
 ![alt text](https://raw.githubusercontent.com/suchibharani/subreddit-react-app/main/static/img/image2.png)
+
+
+## Individual post
 
 ![alt text](https://raw.githubusercontent.com/suchibharani/subreddit-react-app/main/static/img/image1.png)
 
